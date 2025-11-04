@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Tetris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="title-group">
+          <h1 class="title">Fresh Tetris</h1>
+          <p class="subtitle">감각적인 테마와 함께 즐기는 클래식 테트리스</p>
+        </div>
+        <button class="primary-button" id="start-button" type="button">
+          새로 시작하기
+        </button>
+      </header>
+      <main class="playground">
+        <section class="panel board" id="board" aria-label="게임 보드"></section>
+        <aside class="sidebar">
+          <div class="info-card score-card">
+            <h2>점수</h2>
+            <p class="score" id="score">0</p>
+          </div>
+          <div class="info-card">
+            <h2>레벨</h2>
+            <p class="level" id="level">1</p>
+          </div>
+          <div class="info-card">
+            <h2>줄 제거</h2>
+            <p class="lines" id="lines">0</p>
+          </div>
+          <div class="info-card">
+            <h2>다음 블록</h2>
+            <div class="mini-board" id="next-board"></div>
+          </div>
+          <div class="info-card">
+            <h2>홀드</h2>
+            <div class="mini-board" id="hold-board"></div>
+          </div>
+          <div class="info-card instructions">
+            <h2>조작법</h2>
+            <ul>
+              <li><span>← →</span> 이동</li>
+              <li><span>↑</span> 회전</li>
+              <li><span>↓</span> 빠르게 내리기</li>
+              <li><span>Space</span> 하드드롭</li>
+              <li><span>Shift</span> 홀드</li>
+              <li><span>P</span> 일시정지</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+      <footer class="app-footer">
+        <p>산뜻한 컬러의 테마로 리프레시된 테트리스!</p>
+      </footer>
+    </div>
+    <div class="overlay hidden" id="overlay">
+      <div class="overlay-card">
+        <h2 id="overlay-title">게임 오버</h2>
+        <p id="overlay-message"></p>
+        <button class="primary-button" id="overlay-button" type="button">
+          다시 플레이
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
