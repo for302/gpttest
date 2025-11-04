@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>똥피하기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="game-body">
+    <div class="app-shell dodge-shell">
+      <nav class="top-nav" aria-label="보조 내비게이션">
+        <a class="ghost-link" href="index.html">← 게임 선택으로 돌아가기</a>
+      </nav>
+      <header class="app-header">
+        <div class="title-group">
+          <h1 class="title">똥피하기</h1>
+          <p class="subtitle">좌우로 이동하며 떨어지는 똥을 피해 오래 살아남으세요!</p>
+        </div>
+        <button class="primary-button" id="dodge-start" type="button">
+          게임 시작하기
+        </button>
+      </header>
+      <main class="playground dodge-playground">
+        <section class="panel dodge-panel" aria-label="게임 화면">
+          <canvas
+            id="dodge-canvas"
+            width="360"
+            height="560"
+            role="img"
+            aria-label="똥피하기 게임 보드"
+          ></canvas>
+          <p class="dodge-message" id="dodge-message">
+            버튼을 누르면 게임이 시작됩니다. 떨어지는 똥을 피해보세요!
+          </p>
+        </section>
+        <aside class="sidebar">
+          <div class="info-card score-card">
+            <h2>점수</h2>
+            <p class="score" id="dodge-score">0.0초</p>
+          </div>
+          <div class="info-card">
+            <h2>레벨</h2>
+            <p class="level" id="dodge-level">1</p>
+          </div>
+          <div class="info-card">
+            <h2>최고 기록</h2>
+            <p class="level" id="dodge-best">0.0초</p>
+          </div>
+          <div class="info-card">
+            <h2>게임 상태</h2>
+            <p class="status" id="dodge-status">대기 중</p>
+          </div>
+          <div class="info-card instructions">
+            <h2>조작법</h2>
+            <ul>
+              <li><span>← →</span> 좌우 이동</li>
+              <li><span>Space</span> 즉시 재시작</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script src="dodge.js"></script>
+  </body>
+</html>
